@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animated Canvas Background!</title>
+	<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: Helvetica;
+				color: #fff;
+			}
+			canvas {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+			}
+			#backgroundHolder {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				background-color: #999;
+			}
+			#realbody {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				overflow: auto;
+				max-height: 100%;
+			}
+			h1 {
+				margin-left: 22px;
+			}
+			p {
+				line-height: 22px;
+			}
+			a {
+				color: #fff;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+			.page {
+				width: 940px;
+				margin: 0 auto;
+			}
+			.content {
+				background-color: #333;
+				padding: 1px 20px;
+				opacity:0.6;
+				filter:alpha(opacity=60);
+				border: 1px solid #fff;
+				-moz-border-radius: 12px; 
+				-webkit-border-radius: 12px;
+				margin-bottom: 20px;
+			}
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				new AniBg("backgroundCanvas", "stars.png").start();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="backgroundHolder">
+			<canvas id="backgroundCanvas" width="800" height="500"></canvas>
+		<div>
+		<div id="realbody">
+			<div class="page">
+				<h1>Animated Background Demo</h1>
+				<div class="content">
+					<p>This is a simple demo to show how to use Canvas element as a cool animated background with HTML5.</p>
+					<p>For more web demos also start following me on <a href="http://twitter.com/mektball">twitter</a>.
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
